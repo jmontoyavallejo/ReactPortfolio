@@ -13,31 +13,38 @@ const Portfolio = () => {
             id: 1,
             src: datacamp, 
             href:'https://www.datacamp.com/certificate/DSA0018597955634',
+            title: 'DataCamp certification',
+
         },
         {
             id: 2,
             src: datavisualization,
-            href:'https://app.datacamp.com/workspace/workspaces/all',
+            href:'/notebook.pdf',
+            title: 'Supervised learning',
         },
         {
             id: 3,
             src: navbar,
-            href:'/notebook.ipynb',
+            href:'https://www.datacamp.com/certificate/DSA0018597955634',
+            title: 'DataCamp certification',
         },
         {
             id: 4,
             src: installNode,
             href:'https://www.datacamp.com/certificate/DSA0018597955634',
+            title: 'DataCamp certification',
         },
         {
             id: 5,
             src: reactSmooth,
             href:'https://www.datacamp.com/certificate/DSA0018597955634',
+            title: 'DataCamp certification',
         },
         {
             id: 6,
             src: reactWeather,
             href:'https://www.datacamp.com/certificate/DSA0018597955634',
+            title: 'DataCamp certification',
         }
     ]
     return (
@@ -54,11 +61,11 @@ const Portfolio = () => {
 
 
                 <div  className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-                {portfolio.map(({ id, src,href  }) =>
+                {portfolio.map(({ id, src,href,title  }) =>
                         <div key={id}className='shadow-md shadow-gray-600 rounded-lg'>
                             <img  src={src} alt="" className='rounded-md duration-200 hover:scale-105 ' />
                             <div className='flex items-center justify-center'>
-                                <button   className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'><a href={href}  target='_blanck'>Code</a> </button>
+                                <button   className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'><a href={href}  target='_blanck'>{title}</a> </button>
                             </div>
                         </div>
                 )}
