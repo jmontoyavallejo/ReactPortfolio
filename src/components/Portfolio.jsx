@@ -1,7 +1,7 @@
 import React from 'react'
 import datacamp from '../assets/portfolio/datacamp.png'
 import installNode from '../assets/portfolio/installNode.jpg'
-import navbar from '../assets/portfolio/navbar.jpg'
+import list from '../assets/portfolio/list.png'
 import datavisualization from '../assets/portfolio/datavisualization.png'
 import reactSmooth from '../assets/portfolio/reactSmooth.jpg'
 import reactWeather from '../assets/portfolio/reactWeather.jpg'
@@ -24,9 +24,9 @@ const Portfolio = () => {
         },
         {
             id: 3,
-            src: navbar,
-            href:'https://www.datacamp.com/certificate/DSA0018597955634',
-            title: 'DataCamp certification',
+            src: list,
+            href:'https://peppy-panda-99c598.netlify.app/',
+            title: 'Components and hooks',
         },
         {
             id: 4,
