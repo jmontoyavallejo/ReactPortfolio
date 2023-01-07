@@ -1,48 +1,49 @@
 import React from 'react'
 import datacamp from '../assets/portfolio/datacamp.png'
-import installNode from '../assets/portfolio/installNode.jpg'
+import front from '../assets/portfolio/front.png'
 import list from '../assets/portfolio/list.png'
 import datavisualization from '../assets/portfolio/datavisualization.png'
-import reactSmooth from '../assets/portfolio/reactSmooth.jpg'
-import reactWeather from '../assets/portfolio/reactWeather.jpg'
+import back from '../assets/portfolio/back.png'
 
 const Portfolio = () => {
 
     const portfolio = [
+
         {
             id: 1,
+            src: datavisualization,
+            href:'/notebook.pdf',
+            title: 'Supervised learning',
+        },
+
+        {
+            id: 2,
+            src: front,
+            href:'https://ephemeral-lolly-5a0ff4.netlify.app/',
+            title: 'ML frontend React',
+        },
+        {
+            id: 3,
+            src: back,
+            href:'https://test-api-pr1g.onrender.com/docs',
+            title: 'ML backend Fastapi',
+        },
+        {
+            id: 4,
             src: datacamp, 
             href:'https://www.datacamp.com/certificate/DSA0018597955634',
             title: 'DataCamp certification',
 
         },
         {
-            id: 2,
-            src: datavisualization,
-            href:'/notebook.pdf',
-            title: 'Supervised learning',
-        },
-        {
-            id: 3,
+            id: 5,
             src: list,
             href:'https://peppy-panda-99c598.netlify.app/',
             title: 'Components and hooks',
         },
         {
             id: 4,
-            src: installNode,
-            href:'https://www.datacamp.com/certificate/DSA0018597955634',
-            title: 'DataCamp certification',
-        },
-        {
-            id: 5,
-            src: reactSmooth,
-            href:'https://www.datacamp.com/certificate/DSA0018597955634',
-            title: 'DataCamp certification',
-        },
-        {
-            id: 6,
-            src: reactWeather,
+            src: datacamp, 
             href:'https://www.datacamp.com/certificate/DSA0018597955634',
             title: 'DataCamp certification',
         }

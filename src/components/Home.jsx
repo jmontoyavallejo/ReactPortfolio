@@ -16,13 +16,14 @@ const Home = () => {
                     text-white'>
                         Software developer and data scientist
                     </h2>
-                    <p className='text-gray-500 py-4 max-x-md'>
                     
-D.O.B 05-DIC-1995
-MOBILE +57 3207452896
-ADDRESS Medellin(Antioquia), Colombia.
-E-MAIL jpmvallejo@gmail.com
-LANGUAGE English, Spanish                    </p>
+                    <ul class="max-w-md space-y-1 text-gray-300 list-disc list-inside dark:text-gray-400">
+                        <li>D.O.B   :  05-DIC-1995</li>
+                        <li>MOBILE :   +57 3207452896</li>
+                        <li>ADDRESS:     Medellin (Antioquia), Colombia.</li>
+                        <li>E-MAIL :     jpmvallejo@gmail.com</li>
+                        <li>LANGUAGE :   English, Spanish  </li>
+                    </ul>
                     <div>
                         <Link 
                         to='portfolio' 
