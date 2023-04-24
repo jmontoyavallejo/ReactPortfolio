@@ -4,6 +4,7 @@ import front from '../assets/portfolio/front.png'
 import list from '../assets/portfolio/list.png'
 import datavisualization from '../assets/portfolio/datavisualization.png'
 import back from '../assets/portfolio/back.png'
+import ETL from '../assets/portfolio/qlink_conection.png'
 
 const Portfolio = () => {
 
@@ -42,10 +43,10 @@ const Portfolio = () => {
             title: 'Components and hooks',
         },
         {
-            id: 4,
-            src: datacamp, 
-            href:'https://www.datacamp.com/certificate/DSA0018597955634',
-            title: 'DataCamp certification',
+            id: 6,
+            src: ETL, 
+            href:'https://github.com/jmontoyavallejo/ETL---customer-experience-project',
+            title: 'Full ETL and machine learning project',
         }
     ]
     return (
