@@ -38,6 +38,12 @@ const About = () => {
             <p className="mt-4 text-lg leading-8 text-gray-300">
               I am based in Medellin, Colombia, and open to hybrid and fully remote roles.
             </p>
+            <p className="mt-2 text-lg leading-8 text-gray-300">
+              Phone: +57 300162997
+            </p>
+            <p className="text-lg leading-8 text-gray-300">
+              Email: jpmvallejo@gmail.com
+            </p>
           </div>
           <div className="grid gap-4 lg:col-span-5">
             <article className="glass-card rounded-lg p-5">
