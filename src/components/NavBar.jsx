@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 
+/**
+ * Renders responsive navigation for page sections.
+ * @returns {JSX.Element} Sticky navigation bar.
+ */
 const NavBar = () => {
   const [nav, setNav] = useState(false);
 
@@ -17,31 +21,44 @@ const NavBar = () => {
     {
       id: 3,
       link: "portfolio",
+      label: "case studies",
     },
     {
       id: 4,
       link: "experience",
+      label: "highlights",
     },
     {
       id: 5,
+      link: "leadership",
+      label: "leadership",
+    },
+    {
+      id: 6,
       link: "contact",
     },
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
+    <header
+      className="fixed z-20 flex h-20 w-full items-center justify-between border-b border-blue-300/20
+        bg-[#060d22]/85 px-4 backdrop-blur"
+    >
       <div>
-        <h1 className="text-5xl  ml-2 hidden md:flex">Juan Pablo Montoya Vallejo</h1>
+        <h1 className="ml-2 hidden text-2xl font-semibold text-white md:flex">
+          Juan Pablo Montoya Vallejo
+        </h1>
       </div>
 
       <ul className="hidden md:flex">
-        {links.map(({ id, link }) => (
+        {links.map(({ id, link, label }) => (
           <li
             key={id}
-            className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
+            className="cursor-pointer px-4 capitalize font-medium text-blue-100 duration-200
+              hover:scale-110 hover:text-cyan-300 hover:tracking-wide"
           >
             <Link to={link} smooth duration={500}>
-              {link}
+              {label || link}
             </Link>
           </li>
         ))}
@@ -49,17 +66,21 @@ const NavBar = () => {
 
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
+        className="z-10 cursor-pointer pr-4 text-blue-100 md:hidden"
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
-          {links.map(({ id, link }) => (
+        <ul
+          className="fixed left-0 top-0 flex h-screen w-full flex-col items-center justify-center
+            bg-gradient-to-b from-[#060d22] to-[#1a2754] text-blue-100"
+        >
+          {links.map(({ id, link, label }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer capitalize py-6 text-4xl"
+              className="cursor-pointer px-4 py-6 text-4xl capitalize duration-200
+                hover:scale-110 hover:text-cyan-300"
             >
               <Link
                 onClick={() => setNav(!nav)}
@@ -67,13 +88,13 @@ const NavBar = () => {
                 smooth
                 duration={500}
               >
-                {link}
+                {label || link}
               </Link>
             </li>
           ))}
         </ul>
       )}
-    </div>
+    </header>
   );
 };
 
